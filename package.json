@@ -1,0 +1,25 @@
+{
+  "name": "test-outside-in-express-2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.12.1",
+    "@testcontainers/postgresql": "^10.8.2",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.7",
+    "@types/supertest": "^6.0.2",
+    "express": "^4.19.2",
+    "jest": "^29.7.0",
+    "prisma": "^5.12.1",
+    "supertest": "^6.3.4",
+    "testcontainers": "^10.8.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.0"
+  }
+}
