@@ -1,10 +1,10 @@
 import express, {Application} from "express";
-import {Controller} from "./Controller";
+import {Router} from "./Router";
 
 export class ExpressServer {
     public app: Application;
 
-    constructor(private controllers: Controller[]) {
+    constructor(private controllers: Router[]) {
         this.app = express();
         this.app.use(express.json());
         this.app.get("/health", (req, res) => res.json({status: "OK"}));
