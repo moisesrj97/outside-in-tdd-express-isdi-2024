@@ -8,14 +8,16 @@ export class CatRouter implements Router {
   public router: ExpressRouter;
   constructor(private catCreator: CatCreator, private catFinder: CatFinder) {
     this.router = ExpressRouter();
+    this.registerRoutes();
   }
 
   registerRoutes(): void {
-    throw new Error('Method not implemented.');
+    this.router.post('/', this.createCat.bind(this));
+    this.router.get('/:id', this.findCat.bind(this));
   }
 
   async createCat(req: Request, res: Response): Promise<void> {
-    this.catCreator.execute(req.body);
+    await this.catCreator.execute(req.body);
 
     res.status(201);
     res.json();
